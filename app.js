@@ -1,6 +1,10 @@
 const videoKungFu = document.querySelector(".main-video");
-function play(){
-    console.log(videoKungFu);
-    videoKungFu.play();
+const playButton = document.querySelector(".toggle");
+playButton.addEventListener("click", toggle);
+function toggle(){
+    if(videoKungFu.paused){
+        videoKungFu.play();
+    }else{
+        videoKungFu.pause();
+    }
 }
-play();

@@ -11,21 +11,77 @@
 }  */
 
 .player{
-  max-width: 750px;
+  max-width: 50rem;
   position: relative;
   font-size: 0;
+  overflow: hidden;
   
 }
 body{
-    background-color: aqua;
     margin: 0;
     padding: 0;
     display: flex;
-    background: #7A419B;
     min-height: 100vh;
-    background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);
-    background-size: cover;
+    background: linear-gradient( to bottom right , #FDC639, #FF7C60);
+    /* background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%); */
+    /* background-size: cover; */
     align-items: center;
     justify-content: center;
 
 } 
+.player-button{
+    background: none;
+    border: 0;
+    line-height: 1;
+    color: white;
+    text-align: center;
+    outline: 0;
+    max-width: 10rem;
+    cursor: pointer;
+}
+.player-button:focus{
+    border: 0.1rem solid white;
+    border-radius: 0.3rem;
+    
+}
+.player-controls {
+    display: flex;
+    position: absolute;
+    padding-bottom: 1rem;
+    bottom: 0;
+    width: 100%;
+    transform: translateY(100%) translateY(-20px);
+    transition: all .3s;
+    flex-wrap: wrap;
+    background: rgba(0,0,0,0.1);
+  }
+  .player:hover .player-controls {
+    transform: translateY(0);
+  }
+  .player:hover .progress {
+    height: 5px;
+  }
+  .player-controls > * {
+    flex: 1;
+  }
+  .progress {
+    flex: 10;
+    position: relative;
+    display: flex;
+    flex-basis: 100%;
+    height: 5px;
+    transition: height 0.3s;
+    background: rgba(0,0,0,0.5);
+    cursor: ew-resize;
+  }
+  .progress-filled {
+    width: 50%;
+    background: #ffc600;
+    flex: 0;
+    flex-basis: 50%;
+  }
+/* .player-slider{
+    width: 10px;
+    height: 30px;
+} */
+
