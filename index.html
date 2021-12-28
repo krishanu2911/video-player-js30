@@ -8,20 +8,47 @@
     <title>Document</title>
 </head>
 <body>
+    <div style="display: flex;
+    flex-direction: row;
+    justify-content: space-between;">
+        <img src="./images/580b57fbd9996e24bc43bd2a.png" 
+        style="
+        height: 10rem; 
+        width: 10rem;
+        padding-right: 5rem;
+        " alt="" >
+        <img src="./images/580b57fbd9996e24bc43bd2b.png" 
+        style="
+        height: 10rem; 
+        padding-right: 5rem;
+        width: 10rem;
+        " alt="" >
+        <img src="./images/580b57fbd9996e24bc43bd29.png" 
+        style="
+        height: 10rem; 
+        padding-right: 5rem;
+        width: 10rem;
+        " alt="" >
+    </div>
     <div class="player">
-        <video src="./video/kungFuPanda_Trim.mp4" class="main-video" autoplay></video>
+        <video src="./video/kungFuPanda_Trim.mp4" class="main-video viewer" autoplay></video>
         <div class="player-controls">
             <div class="progress">
                 <div class="progress-filled"></div>
             </div>
             <button class="player-button toggle">►</button>
+            <button style="background: none; color: white; border: none;">🔊</button>
             <input type="range" name="volume" class="player-slider" min="0" max="1" step="0.05" value="1">
+            <button style="background: none; color: white; border: none;">Speed</button>
             <input type="range" name="playbackRate" min="0.5" max="2" step="0.1" value="1" class="player-slider">
             <button data-skip="-10" class="player-button">« 10s</button>
             <button data-skip="25" class="player-button">25s »</button>
         </div>
-
     </div>
+    <!-- <div class="bg-image-div">
+        <img src="./images/wallpaperflare.com_wallpaper.jpg" class="bg-image" alt="">
+    </div> -->
+    
 
     <script src="app.js" type="text/javascript"></script>
 </body>
